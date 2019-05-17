@@ -1,0 +1,6 @@
+version: '3'
+services:
+  ansible:
+    image: hvariant/ansible:latest
+    volumes:
+      - .:/root/packer

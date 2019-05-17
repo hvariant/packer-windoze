@@ -25,12 +25,12 @@
   roles:
   - update
   - personalise
-  - role: jborean93.win_openssh
-    opt_openssh_firewall_profiles: domain,private,public
-    opt_openssh_skip_start: True
-    opt_openssh_version: v7.9.0.0p1-Beta
-    when: not man_is_longhorn
+  #- role: jborean93.win_openssh
+  #  opt_openssh_firewall_profiles: domain,private,public
+  #  opt_openssh_skip_start: True
+  #  opt_openssh_version: v7.9.0.0p1-Beta
+  #  when: not man_is_longhorn
   - cleanup-winsxs
   - cleanup-features
   - cleanup
-  - sysprep
+  #- sysprep

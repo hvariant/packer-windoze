@@ -162,6 +162,7 @@ pri_packer_setup_builders_info:
     - '{{ man_packer_setup_host_type }}/secondary.iso'
     switch_name: '{{ opt_packer_setup_hyperv_switch|default("packer-windoze") }}'
     headless: '{{ opt_packer_setup_headless }}'
+    disk_size: 51200
 
 pri_packer_setup_provisioners_info:
   common: []

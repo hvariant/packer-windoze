@@ -10,6 +10,9 @@ Vagrant.configure(2) do |config|
   config.vm.network :forwarded_port, guest: 3389, host: 3389, id: 'rdp', auto_correct: true
   config.vm.network :forwarded_port, guest: 22, host: 2222, id: 'ssh', auto_correct: true
 
+  # disable smb shared folder
+  config.vm.synced_folder ".", "/vagrant", disabled: true
+
   config.vm.provider "virtualbox" do |vb|
     vb.default_nic_type = "virtio"
     vb.gui = false

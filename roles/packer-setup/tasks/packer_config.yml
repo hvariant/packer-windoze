@@ -30,11 +30,11 @@
 
 - name: create Packer provisioner info
   set_fact:
-    pri_packer_setup_provisioners: '{{ pri_packer_setup_provisioners_info.common + pri_packer_setup_provisioners_info[opt_packer_setup_builder] }}'
+    pri_packer_setup_provisioners: '{{ pri_packer_setup_provisioners_info.common }}'
 
 - name: create Packer post-provisioners info
   set_fact:
-    pri_packer_setup_post_processors: '{{ pri_packer_setup_post_processors_info.common|merge_dict(pri_packer_setup_post_processors_info[opt_packer_setup_builder]) }}'
+    pri_packer_setup_post_processors: '{{ pri_packer_setup_post_processors_info.common }}'
 
 - name: set opt_packer_setup_box_tag if it isn't defined
   set_fact:
